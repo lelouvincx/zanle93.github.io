@@ -1,4 +1,108 @@
-baseURL: http://example.org/
-languageCode: en-us
-title: My New Hugo Site
 theme: "PaperMod"
+baseURL: "https://lelouvincx.github.io/zanle93.github.io/"
+# baseURL: "https://hellovanle.com/"
+publishDir: "docs"
+languageCode: en-us
+title: Van Le
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+menu:
+  main:
+    - name: Archive
+      url: archives/
+      weight: 5
+    - name: About Me
+      url: about
+      weight: 10
+  # - name: Tags
+  #   url: tags
+  #   weight: 10
+  # - name: Categories
+  #   url: categories
+  #   weight: 10
+  # - name: Series
+  #   url: series
+  #   weight: 10
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author: vanle
+  # author: ["Me", "You"] # multiple authors
+
+  defaultTheme: light
+  # disableThemeToggle: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  # displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+  # comments: false
+  # images: ["papermod-cover.png"]
+
+  profileMode:
+    enabled: false
+    title: "Van Le"
+    imageUrl: "img/profile_sq.png"
+    imageTitle: VanLePhoto
+    imageWidth: 200
+    imageHeight: 200
+    subtitle: "Hello World"
+    buttons:
+      - name: Portfolio
+        url: portfolio
+    # - name: Tags
+    #   url: tags
+  homeInfoParams:
+    Title: "Van Le's Portfolio"
+    Content: >
+      <br> ![](img/profile_rect.png)   <br> I'm an innovative and solution-driven busines analyst. With a passion for exploring new solutions, I tackle challenges head-on, constanly pushing boundaries to find creative and efficient outcomes. I take pride in my academic and professional achievements — take a look at my **portfolio** below.
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/van-le2023"
+    - name: email
+      url: "mailto:hellovanle@gmail.com"
+    # - name: github
+    #   url: ""
+    - name: phone
+      url: "tel:657-256-2389"
+    - name: RsS
+      url: "index.xml"
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
