@@ -14,7 +14,7 @@ on:
       hugoVersion:
         description: "Hugo Version"
         required: false
-        default: "0.92.2+extended"
+        default: "0.83.0"
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
