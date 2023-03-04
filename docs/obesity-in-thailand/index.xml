@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Obesity-in-thailands on Van Le</title>
+    <link>/obesity-in-thailand/</link>
+    <description>Recent content in Obesity-in-thailands on Van Le</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/obesity-in-thailand/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/obesity-in-thailand/obesity-final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/obesity-in-thailand/obesity-final/</guid>
+      <description>1 2 3 4 5 6 7 8 9  import pandas as pd import geopandas as gpd import matplotlib.pyplot as plt shapefile = &amp;#39;/Users/vanle/Documents/Obesity data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp&amp;#39; datafile = &amp;#39;/Users/vanle/Documents/Obesity data/obesity.csv&amp;#39; gdf = gpd.read_file(shapefile)[[&amp;#39;ADMIN&amp;#39;, &amp;#39;ADM0_A3&amp;#39;, &amp;#39;geometry&amp;#39;]] gdf.columns = [&amp;#39;country&amp;#39;, &amp;#39;country_code&amp;#39;, &amp;#39;geometry&amp;#39;] gdf.head()    .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }  
+  country country_code geometry     0 Fiji FJI MULTIPOLYGON (((180.</description>
+    </item>
+    
+  </channel>
+</rss>

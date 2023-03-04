@@ -1,59 +1,70 @@
 theme: "PaperMod"
-baseURL: "https://lelouvincx.github.io/zanle93.github.io/"
+# baseURL: "https://lelouvincx.github.io/zanle93.github.io/"
 # baseURL: "https://hellovanle.com/"
 publishDir: "docs"
 languageCode: en-us
 title: Van Le
+
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
+
 menu:
   main:
-    - name: Archive
-      url: archives/
-      weight: 5
-    - name: About Me
-      url: about
+    - name: Archives
+      url: /archives
       weight: 10
-  # - name: Tags
-  #   url: tags
-  #   weight: 10
-  # - name: Categories
-  #   url: categories
-  #   weight: 10
-  # - name: Series
-  #   url: series
-  #   weight: 10
+    - name: Categories
+      url: /categories
+      weight: 20
+    - name: Search
+      url: /search
+      weight: 30
+    - name: About Me
+      url: /about
+      weight: 40
+
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
   author: vanle
-  # author: ["Me", "You"] # multiple authors
-
   defaultTheme: light
   # disableThemeToggle: true
   ShowShareButtons: true
   ShowReadingTime: true
   # disableSpecial1stPost: true
-  # displayFullLangName: true
+  displayFullLangName: true
+  ShowCodeCopyButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowToc: true
   # comments: false
   # images: ["papermod-cover.png"]
 
+  assets:
+    disableHLJS: true
+
+  cover:
+    linkFullImages: true
+    responsiveImages: true
+
+  homeInfoParams:
+    Title: "Van Le's Portfolio"
+    Content: <br> ![](profile_rect.png)   <br> I'm an innovative and solution-driven busines analyst. With a passion for exploring new solutions, I tackle challenges head-on, constanly pushing boundaries to find creative and efficient outcomes. I take pride in my academic and professional achievements — take a look at my **portfolio** below.
+
   profileMode:
     enabled: false
     title: "Van Le"
-    imageUrl: "img/profile_sq.png"
+    imageUrl: "profile_sq.png"
     imageTitle: VanLePhoto
     imageWidth: 200
     imageHeight: 200
@@ -61,13 +72,7 @@ params:
     buttons:
       - name: Portfolio
         url: portfolio
-    # - name: Tags
-    #   url: tags
-  homeInfoParams:
-    Title: "Van Le's Portfolio"
-    Content: >
-      <br> ![](img/profile_rect.png)   <br> I'm an innovative and solution-driven busines analyst. With a passion for exploring new solutions, I tackle challenges head-on, constanly pushing boundaries to find creative and efficient outcomes. I take pride in my academic and professional achievements — take a look at my **portfolio** below.
-
+  #
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/in/van-le2023"
@@ -75,32 +80,54 @@ params:
       url: "mailto:hellovanle@gmail.com"
     # - name: github
     #   url: ""
-    - name: phone
-      url: "tel:657-256-2389"
+    # - name: phone
+    #   url: "tel:657-256-2389"
     - name: RsS
       url: "index.xml"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
 taxonomies:
   category: categories
   tag: tags
   series: series
+
 markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    lineNos: true
+    noClasses: false # Styled in assets/css/extended/dracula.css
+
 privacy:
   vimeo:
     disabled: false
     simple: true
+
   twitter:
     disabled: false
     enableDNT: true
     simple: true
+
   instagram:
     disabled: false
     simple: true
+
   youtube:
     disabled: false
     privacyEnhanced: true
+
 services:
   instagram:
     disableInlineCSS: true
